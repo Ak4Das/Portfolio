@@ -325,24 +325,6 @@ body {
   background-color: #ffe578;
 }
 
-.title-orange,
-.tag-orange {
-  color: #fc815c;
-}
-.tooltip-orange {
-  background-color: #fc815c;
-  color: #fff;
-}
-
-.title-teal,
-.tag-teal {
-  color: #47afa1;
-}
-.tooltip-teal {
-  background-color: #47afa1;
-  color: #fff;
-}
-
 .text-dark {
   color: #000;
 }
