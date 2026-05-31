@@ -1,19 +1,11 @@
-/* --- Reset & Global Setups --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --max-width: 1280px;
-  --text-muted: #b0b2c3;
-  --primary-gradient: linear-gradient(to left, #1595b6, #1f2667e6);
-  --btn-blue: #4595eb;
-}
-
 body {
-  background-color: #0b0f19; /* Base dark canvas tone implicit in code */
+  background-color: #0b0f19;
   color: #ffffff;
   overflow-x: hidden;
 }
@@ -36,7 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 1280px;
   margin: 1rem auto 0 auto;
   padding: 0 1rem;
 }
@@ -69,12 +61,6 @@ body {
   inset: 0;
 }
 
-@media (min-width: 768px) {
-  .canvas-wrapper {
-    display: block;
-  }
-}
-
 /* --- Main Content Section Block --- */
 .content-container {
   display: flex;
@@ -85,7 +71,7 @@ body {
 
 .inner-layout {
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
   position: relative;
@@ -101,29 +87,10 @@ body {
   width: 300px;
 }
 
-@media (min-width: 640px) {
-  .bg-art-svg {
-    transform: translate(-50%, -180px);
-    width: 400px;
-  }
-}
-
-@media (min-width: 768px) {
-  .bg-art-svg {
-    width: 650px;
-  }
-}
-
 /* --- Bio Branding Context Typography --- */
 .bio-text {
   position: relative;
   margin-left: 1rem;
-}
-
-@media (min-width: 768px) {
-  .bio-text {
-    margin-left: 3rem;
-  }
 }
 
 .dev-name {
@@ -134,12 +101,6 @@ body {
   margin-right: 3rem;
 }
 
-@media (min-width: 768px) {
-  .dev-name {
-    font-size: 4rem;
-  }
-}
-
 .dev-title {
   pointer-events: none;
   font-family: "Merriweather", serif;
@@ -147,16 +108,10 @@ body {
   margin: 1rem 0;
 }
 
-@media (min-width: 768px) {
-  .dev-title {
-    margin: 2rem 0;
-  }
-}
-
 /* --- Reusable Custom Buttons Framework --- */
 .btn {
-  background: var(--primary-gradient);
-  background-color: var(--btn-blue);
+  background: linear-gradient(to left, #1595b6, #1f2667e6);
+  background-color: #4595eb;
   color: white;
   padding: 0.5rem 1.25rem;
   border-radius: 4px;
@@ -203,7 +158,7 @@ body {
 .social-icon {
   width: 1.75rem;
   height: 1.75rem;
-  color: var(--text-muted);
+  color: #b0b2c3;
   transition: color 0.2s ease;
 }
 
@@ -245,17 +200,6 @@ body {
   top: 3rem;
 }
 
-/* Color System Tokens */
-:root {
-  --bg-dark: #111;
-  --theme-blue: #1788ae;
-  --light-blue: #459bd5;
-  --yellow: #ffe578;
-  --orange: #fc815c;
-  --teal: #47afa1;
-  --gray-border: #999;
-}
-
 /* Base resets for components */
 .latest-works {
   max-width: 1280px;
@@ -275,7 +219,7 @@ body {
 /* Section Title Styling */
 .works-title {
   font-size: 30px;
-  background-color: var(--bg-dark);
+  background-color: #0b0f19;
   position: relative;
   z-index: 10;
   font-weight: 700;
@@ -283,7 +227,7 @@ body {
   width: max-content;
   margin: 0 auto;
   text-align: center;
-  color: var(--theme-blue);
+  color: #1788ae;
 }
 
 /* Timeline grid tracking setup */
@@ -318,9 +262,15 @@ body {
 .image-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
   position: relative;
+}
+
+.image-wrapper-one {
+  margin-right: auto;
+}
+
+.image-wrapper-two {
+  margin-left: auto;
 }
 
 .image-wrapper img {
@@ -390,7 +340,7 @@ body {
 }
 
 .tech-tags li {
-  border: 1px solid var(--gray-border);
+  border: 1px solid #999;
   border-radius: 50px;
   padding: 5px 10px;
   font-size: 14px;
@@ -400,36 +350,36 @@ body {
 /* Decorative Colors mapping rules */
 .title-blue,
 .tag-blue {
-  color: var(--light-blue);
+  color: #459bd5;
 }
 .tooltip-blue {
-  background-color: var(--light-blue);
+  background-color: #459bd5;
   color: #fff;
 }
 
 .title-yellow,
 .tag-yellow {
-  color: var(--yellow);
+  color: #ffe578;
 }
 .tooltip-yellow {
-  background-color: var(--yellow);
+  background-color: #ffe578;
 }
 
 .title-orange,
 .tag-orange {
-  color: var(--orange);
+  color: #fc815c;
 }
 .tooltip-orange {
-  background-color: var(--orange);
+  background-color: #fc815c;
   color: #fff;
 }
 
 .title-teal,
 .tag-teal {
-  color: var(--teal);
+  color: #47afa1;
 }
 .tooltip-teal {
-  background-color: var(--teal);
+  background-color: #47afa1;
   color: #fff;
 }
 
@@ -442,18 +392,241 @@ body {
   display: none;
 }
 
-/* --- Responsive Tablet and Desktop Adjustments --- */
+/* Section Wrapper Constraints */
+.connect-section {
+  max-width: 1280px; /* max-w-screen-xl */
+  margin: 0 auto;
+  padding: 0 16px 48px 16px; /* px-4 pb-12 */
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  box-sizing: border-box;
+}
+
+/* Explicit reset helper */
+.connect-section *,
+.connect-section *::before,
+.connect-section *::after {
+  box-sizing: border-box;
+}
+
+/* Header Section Title */
+.connect-title {
+  font-size: 30px; /* text-3xl */
+  background-color: #0b0f19;
+  position: relative;
+  z-index: 10;
+  font-weight: 700;
+  padding: 8px 16px;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  color: #1788ae;
+}
+
+/* Split Column Row Flex Engine */
+.connect-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px; /* mt-10 */
+  gap: 32px;
+}
+
+.connect-media,
+.connect-form {
+  width: 100%;
+}
+
+.connect-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Forms layout controls */
+.form-group {
+  margin-bottom: 16px; /* mb-4 */
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px; /* mb-2 */
+  font-size: 14px; /* text-sm */
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.input-container {
+  position: relative;
+}
+
+/* Icon placement engines within fields */
+.input-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 14px; /* ps-3.5 */
+  pointer-events: none;
+}
+
+.input-icon .icon {
+  width: 16px; /* w-4 */
+  height: 16px; /* h-4 */
+  color: #9ca3af;
+}
+
+/* Fields Styles Configurations */
+.form-input,
+.form-textarea {
+  display: block;
+  width: 100%;
+  font-size: 14px; /* text-sm */
+  padding: 10px; /* p-2.5 */
+  background-color: #374151;
+  border: 2px solid #4b5563;
+  border-radius: 8px; /* rounded-lg */
+  color: #ffffff;
+  outline: none;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-input.has-icon {
+  padding-left: 40px; /* ps-10 */
+}
+
+/* Focus micro-interactions */
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #1788ae;
+  box-shadow: 0 0 0 2px rgba(23, 136, 174, 0.25);
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+/* Primary Form Button Design rules */
+.submit-btn {
+  display: block;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #1788ae;
+  font-weight: 500;
+  border-radius: 8px; /* rounded-lg */
+  font-size: 14px; /* text-sm */
+  padding: 10px 20px; /* px-5 py-2.5 */
+  text-align: center;
+  transition:
+    background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #1280a4;
+}
+
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(68, 137, 160, 0.5); /* focus:ring-[#4489a0] */
+}
+
+/* Footer Box Container Setup */
+.portfolio-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px; /* pb-10 */
+  box-sizing: border-box;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+/* Text Element Styling Rules */
+.copyright-text {
+  font-size: 12px; /* text-xs */
+  color: #d1d5db;
+  margin: 0;
+}
+
+/* Central Main Branding Element */
+.footer-logo {
+  margin-top: 16px; /* my-4 splitting values */
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo svg {
+  display: block;
+}
+
+/* Unordered list navigation flexbox matrix */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* gap-6 */
+}
+
+/* Icon layout & transition definitions */
+.social-links a {
+  display: inline-flex;
+  text-decoration: none;
+  color: #b0b2c3;
+  transition: color 0.15s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+.social-icon {
+  width: 20px;
+  height: auto;
+  display: block;
+}
+
 @media (min-width: 640px) {
+  .bg-art-svg {
+    transform: translate(-50%, -180px);
+    width: 400px;
+  }
   .latest-works {
     padding-bottom: 64px;
   }
 
   .works-title {
     font-size: 40px;
-    border-bottom: 2px solid var(--theme-blue);
+    border-bottom: 2px solid #1788ae;
   }
 
-  /* Vertical spine center track */
   .works-container {
     gap: 80px;
   }
@@ -461,7 +634,7 @@ body {
   .works-container::before {
     content: "";
     width: 2px;
-    background-color: var(--theme-blue);
+    background-color: #1788ae;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -470,7 +643,6 @@ body {
     z-index: 1;
   }
 
-  /* Structural side alternative pattern rules */
   .project-item {
     flex-direction: row;
     gap: 80px;
@@ -505,11 +677,10 @@ body {
     margin-left: auto;
   }
 
-  /* Timeline item connecting arms */
   .project-item::after {
     content: "";
     height: 1px;
-    background-color: var(--theme-blue);
+    background-color: #1788ae;
     position: absolute;
     top: 50%;
     z-index: 1;
@@ -525,7 +696,6 @@ body {
     right: 25%;
   }
 
-  /* Central nodes execution styles */
   .timeline-dot {
     display: block;
     width: 16px;
@@ -536,7 +706,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--bg-dark);
+    background-color: #111;
     z-index: 10;
     transition: transform 0.1s ease-in-out;
   }
@@ -546,19 +716,18 @@ body {
   }
 
   .dot-blue {
-    border-color: var(--light-blue);
+    border-color: #459bd5;
   }
   .dot-yellow {
-    border-color: var(--yellow);
+    border-color: #ffe578;
   }
   .dot-orange {
-    border-color: var(--orange);
+    border-color: #fc815c;
   }
   .dot-teal {
-    border-color: var(--teal);
+    border-color: #47afa1;
   }
 
-  /* Desktop Absolute Hover Floating Tooltips configuration */
   .tooltip {
     position: absolute;
     top: 20px;
@@ -567,7 +736,6 @@ body {
     margin-top: 0;
   }
 
-  /* Tooltip Pointer indicator arrows via CSS pseudo-elements */
   .tooltip::after {
     content: "";
     width: 16px;
@@ -595,262 +763,32 @@ body {
   .project-desc {
     font-size: 16px;
   }
-}
-/* Color System Tokens */
-:root {
-  --bg-dark-base: #111;
-  --theme-blue: #1788ae;
-  --theme-blue-hover: #1280a4;
-  --theme-blue-focus: #4489a0;
 
-  /* Input fields (Matching original fallback and dark theme colors) */
-  --input-bg: #374151; /* dark:bg-gray-700 */
-  --input-border: #4b5563; /* dark:border-gray-600 */
-  --input-placeholder: #9ca3af; /* dark:placeholder-gray-400 */
-  --text-white: #ffffff;
-  --icon-color: #9ca3af; /* dark:text-gray-400 */
-}
-
-/* Section Wrapper Constraints */
-.connect-section {
-  max-width: 1280px; /* max-w-screen-xl */
-  margin: 0 auto;
-  padding: 0 16px 48px 16px; /* px-4 pb-12 */
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
-  box-sizing: border-box;
-}
-
-/* Explicit reset helper */
-.connect-section *,
-.connect-section *::before,
-.connect-section *::after {
-  box-sizing: border-box;
-}
-
-/* Header Section Title */
-.connect-title {
-  font-size: 30px; /* text-3xl */
-  background-color: var(--bg-dark-base);
-  position: relative;
-  z-index: 10;
-  font-weight: 700;
-  padding: 8px 16px;
-  width: max-content;
-  margin: 0 auto;
-  text-align: center;
-  color: var(--theme-blue);
-}
-
-/* Split Column Row Flex Engine */
-.connect-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px; /* mt-10 */
-  gap: 32px;
-}
-
-.connect-media,
-.connect-form {
-  width: 100%;
-}
-
-.connect-media img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-/* Forms layout controls */
-.form-group {
-  margin-bottom: 16px; /* mb-4 */
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 8px; /* mb-2 */
-  font-size: 14px; /* text-sm */
-  font-weight: 500;
-  color: var(--text-white);
-}
-
-.input-container {
-  position: relative;
-}
-
-/* Icon placement engines within fields */
-.input-icon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  padding-left: 14px; /* ps-3.5 */
-  pointer-events: none;
-}
-
-.input-icon .icon {
-  width: 16px; /* w-4 */
-  height: 16px; /* h-4 */
-  color: var(--icon-color);
-}
-
-/* Fields Styles Configurations */
-.form-input,
-.form-textarea {
-  display: block;
-  width: 100%;
-  font-size: 14px; /* text-sm */
-  padding: 10px; /* p-2.5 */
-  background-color: var(--input-bg);
-  border: 2px solid var(--input-border);
-  border-radius: 8px; /* rounded-lg */
-  color: var(--text-white);
-  outline: none;
-  transition:
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-}
-
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: var(--input-placeholder);
-}
-
-.form-input.has-icon {
-  padding-left: 40px; /* ps-10 */
-}
-
-/* Focus micro-interactions */
-.form-input:focus,
-.form-textarea:focus {
-  border-color: var(--theme-blue);
-  box-shadow: 0 0 0 2px rgba(23, 136, 174, 0.25);
-}
-
-.form-textarea {
-  resize: vertical;
-}
-
-/* Primary Form Button Design rules */
-.submit-btn {
-  display: block;
-  width: 100%;
-  border: none;
-  cursor: pointer;
-  color: var(--text-white);
-  background-color: var(--theme-blue);
-  font-weight: 500;
-  border-radius: 8px; /* rounded-lg */
-  font-size: 14px; /* text-sm */
-  padding: 10px 20px; /* px-5 py-2.5 */
-  text-align: center;
-  transition:
-    background-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-}
-
-.submit-btn:hover {
-  background-color: var(--theme-blue-hover);
-}
-
-.submit-btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(68, 137, 160, 0.5); /* focus:ring-[#4489a0] */
-}
-
-/* Tablet & Large Desktop Breakpoints */
-@media (min-width: 640px) {
   .connect-title {
-    font-size: 40px; /* sm:text-[40px] */
-    border: 2px solid var(--theme-blue);
-    border-radius: 6px; /* rounded-md */
+    font-size: 40px;
+    border: 2px solid #1788ae;
+    border-radius: 6px;
   }
 }
 
 @media (min-width: 768px) {
+  .canvas-wrapper {
+    display: block;
+  }
+  .bg-art-svg {
+    width: 650px;
+  }
+  .bio-text {
+    margin-left: 3rem;
+  }
+  .dev-name {
+    font-size: 4rem;
+  }
+  .dev-title {
+    margin: 2rem 0;
+  }
   .connect-grid {
     flex-direction: row;
     gap: 48px;
   }
-}
-
-/* Color System Tokens */
-:root {
-  --text-muted-gray: #d1d5db; /* text-gray-300 */
-  --social-default: #b0b2c3; /* baseline text-[#b0b2c3] */
-  --social-hover: #ffffff; /* hover:text-white */
-}
-
-/* Footer Box Container Setup */
-.portfolio-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 40px; /* pb-10 */
-  box-sizing: border-box;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
-}
-
-/* Text Element Styling Rules */
-.copyright-text {
-  font-size: 12px; /* text-xs */
-  color: var(--text-muted-gray);
-  margin: 0;
-}
-
-/* Central Main Branding Element */
-.footer-logo {
-  margin-top: 16px; /* my-4 splitting values */
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-logo svg {
-  display: block;
-}
-
-/* Unordered list navigation flexbox matrix */
-.social-links {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px; /* gap-6 */
-}
-
-/* Icon layout & transition definitions */
-.social-links a {
-  display: inline-flex;
-  text-decoration: none;
-  color: var(--social-default);
-  transition: color 0.15s ease-in-out;
-}
-
-.social-links a:hover {
-  color: var(--social-hover);
-}
-
-.social-icon {
-  width: 20px; /* w-5 */
-  height: auto;
-  display: block;
 }
