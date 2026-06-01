@@ -356,7 +356,7 @@ body {
 
 .connect-title {
   font-size: 30px;
-  background-color: #0b0f19;
+  background-color: #010612;
   position: relative;
   z-index: 10;
   font-weight: 700;
@@ -708,5 +708,25 @@ body {
   .connect-grid {
     flex-direction: row;
     gap: 48px;
+  }
+}
+
+@media (max-width: 639px) {
+  .image-wrapper-one {
+    margin: auto;
+  }
+  .image-wrapper-two {
+    margin: auto;
+  }
+  .tooltip {
+    margin: 20px auto 0px;
+  }
+  .works-container {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    gap: 70px;
+  }
+  .project-item {
+    gap: 40px;
   }
 }
