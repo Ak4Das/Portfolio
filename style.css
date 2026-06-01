@@ -260,8 +260,8 @@ body {
 .tooltip {
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 4px 8px;
+  gap: 15px;
+  padding: 6px 12px;
   font-size: 14px;
   border-radius: 4px;
   width: max-content;
@@ -270,8 +270,31 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.external-icon {
-  flex-shrink: 0;
+.tooltip a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.code-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.BharatVastra-code-link:hover,
+.BharatVastra-demo-link:hover {
+  transform: scale(1.1);
+  color: #ff8c00;
+  fill: #ff8c00;
+}
+
+.Anvaya-code-link:hover,
+.Anvaya-demo-link:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+  fill: #ffffff;
 }
 
 .project-info {
