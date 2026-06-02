@@ -162,12 +162,18 @@ body {
   padding: 3rem 6rem;
   gap: 4rem;
   font-family: sans-serif;
+  transform: translate(-50%, -50%) scale(1);
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .about-section.active {
-  transform: translate(-50%, -50%) scale(1);
-  left: 50%;
-  pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 300ms ease;
 }
 
 .x-icon {

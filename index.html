@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Spartan:wght@400;700;800&display=swap"
       rel="stylesheet"
@@ -103,7 +104,7 @@
           <div class="bio-text">
             <h1 class="dev-name">Akash Das</h1>
             <p class="dev-title">MERN Stack Developer</p>
-            <button class="btn btn-about">
+            <button class="btn btn-about" onclick="openAboutMeSection()">
               About Me
               <svg
                 class="btn-arrow"
@@ -220,8 +221,8 @@
           </ul>
         </div>
       </div>
-      <div class="about-section active">
-        <div class="x-icon">
+      <div class="about-section" id="about-section">
+        <div class="x-icon" onclick="CloseAboutMeSection()">
           <img src="./assets/icons/x.svg" alt="x icon" draggable="false" />
         </div>
         <div class="about-me">
