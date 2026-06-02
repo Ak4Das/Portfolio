@@ -522,6 +522,12 @@ body {
   margin: 0;
 }
 
+.project-info ul li:hover {
+  border-color: #1595b6;
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+
 .category-tag {
   font-size: 14px;
   display: inline-block;
@@ -739,10 +745,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  cursor: pointer;
 }
 
 .footer-logo svg {
   display: block;
+}
+
+.footer-logo a {
+  background-color: #1788ae;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: max-content;
+  left: 70px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.footer-logo a::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: inherit;
+  transform: rotate(45deg) translate(-50%, 0%);
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  color: #ffffff;
+}
+
+.footer-logo:hover a {
+  opacity: 1;
 }
 
 .social-links {
@@ -957,6 +997,12 @@ body {
   .top-skills-icons {
     gap: 1.5rem;
   }
+  .about-me-detail:first-of-type {
+    line-height: 23px;
+  }
+  .about-me-text ul li {
+    padding: 4px 10px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -984,8 +1030,8 @@ body {
   .coder-img-container {
     max-width: 475px;
   }
-  .about-me-text ul li {
-    padding: 4px 10px;
+  .about-me-detail:first-of-type {
+    line-height: 25px;
   }
 }
 
