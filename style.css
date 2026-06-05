@@ -506,8 +506,8 @@ body {
   fill: #ff8c00;
 }
 
-.Anvaya-code-link:hover,
-.Anvaya-demo-link:hover {
+.PulseCRM-code-link:hover,
+.PulseCRM-demo-link:hover {
   transform: scale(1.1);
   color: #ffffff;
   fill: #ffffff;
