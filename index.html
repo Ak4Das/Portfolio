@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/images/SVG/name-logo-white.svg" type="image/gif" sizes="16x16">
+    <link
+      rel="icon"
+      href="./assets/images/SVG/name-logo-white.svg"
+      type="image/gif"
+      sizes="16x16"
+    />
     <title>Akash Das</title>
     <link rel="stylesheet" href="font.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body id="body">
     <section class="hero-section" id="hero-section">
       <header class="main-header">
         <svg
-          class="brand-logo"
+          class="brand-logo brandLogoOne"
           width="70"
           height="70"
           viewBox="0 0 406 368"
@@ -27,9 +32,45 @@
           />
         </svg>
 
+        <svg
+          class="brand-logo brandLogoTwo"
+          style="display: none"
+          width="70"
+          height="70"
+          viewBox="0 0 406 368"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M314.899 203.5L314.899 349.43L162.5 209.053M314.899 203.5L283.037 203.586M314.899 203.5L337.881 203.586L381 171.109L314.899 171.109M162.5 209.053L118.044 170.96L157.5 171.109M162.5 209.053L65.5 301.465L20.5595 301.465L137.482 189.156M200.5 171.109L283.037 96.5L283.037 171.109M200.5 171.109L283.037 171.109M200.5 171.109L157.5 171.109M283.037 203.586L210.846 203.123L283.037 271.086L283.037 203.586ZM283.037 171.109L314.899 171.109M157.5 171.109L316.135 20.4322L314.899 171.109"
+            stroke="#1F2667"
+            stroke-opacity="0.9"
+            stroke-width="16"
+          ></path>
+          <path
+            d="M314.899 203.5L314.899 349.43L162.5 209.053M314.899 203.5L283.037 203.586M314.899 203.5L337.881 203.586L381 171.109L314.899 171.109M162.5 209.053L118.044 170.96L157.5 171.109M162.5 209.053L65.5 301.465L20.5595 301.465L137.482 189.156M200.5 171.109L283.037 96.5L283.037 171.109M200.5 171.109L283.037 171.109M200.5 171.109L157.5 171.109M283.037 203.586L210.846 203.123L283.037 271.086L283.037 203.586ZM283.037 171.109L314.899 171.109M157.5 171.109L316.135 20.4322L314.899 171.109"
+            stroke="url(#footer_paint_linear)"
+            stroke-width="16"
+          ></path>
+          <defs>
+            <linearGradient
+              id="footer_paint_linear"
+              x1="205.549"
+              y1="20.0169"
+              x2="204.338"
+              y2="342.461"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#1595B6"></stop>
+              <stop offset="1" stop-color="#1595B6" stop-opacity="0"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+
         <div class="header-actions">
           <svg
-            class="icon icon-sun"
+            class="icon icon-sun socialIcons"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -51,9 +92,28 @@
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
 
+          <svg
+            class="icon icon-moon"
+            style="display: none; color: #010612"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-moon-icon lucide-moon"
+          >
+            <path
+              d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+            />
+          </svg>
+
           <a href="tel:+919883620996" class="contact-link">
             <svg
-              class="icon"
+              class="icon socialIcons"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -76,7 +136,7 @@
             class="contact-link"
           >
             <svg
-              class="icon icon-whatsapp"
+              class="icon icon-whatsapp socialIcons"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -94,8 +154,14 @@
       <div class="content-container">
         <div class="inner-layout">
           <img
-            class="bg-art-svg"
+            class="bg-art-svg first-portfolio-image"
             src="./assets/images/PNG/DevelopertCodingWithLaptop.png"
+            alt="Developer Coding"
+          />
+          <img
+            class="bg-art-svg second-portfolio-image"
+            style="display: none"
+            src="./assets/images/PNG/DevCodeWithLaptopLightVersion.png"
             alt="Developer Coding"
           />
 
@@ -134,7 +200,7 @@
                 aria-label="LinkedIn Profile"
               >
                 <svg
-                  class="social-icon"
+                  class="social-icon socialIcons"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                 >
@@ -153,7 +219,7 @@
                 aria-label="X Profile"
               >
                 <svg
-                  class="social-icon"
+                  class="social-icon socialIcons"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                 >
@@ -172,7 +238,7 @@
                 aria-label="Instagram Profile"
               >
                 <svg
-                  class="social-icon"
+                  class="social-icon socialIcons"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                 >
@@ -191,7 +257,7 @@
                 aria-label="Send An Email"
               >
                 <svg
-                  class="social-icon"
+                  class="social-icon socialIcons"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                 >
@@ -210,7 +276,7 @@
                 aria-label="Github Profile"
               >
                 <svg
-                  class="social-icon"
+                  class="social-icon githubIcon"
                   style="fill: #ffffff"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -234,10 +300,9 @@
               <h2 class="about-me-title">ABOUT ME</h2>
               <p class="about-me-detail">
                 I'm a Full Stack Developer specializing in the MERN stack and
-                modern web technologies. Passionate about software
-                engineering, AI, and continuous learning, I enjoy transforming
-                complex ideas into intuitive digital products that solve
-                real-world problems.
+                modern web technologies. Passionate about software engineering,
+                AI, and continuous learning, I enjoy transforming complex ideas
+                into intuitive digital products that solve real-world problems.
               </p>
             </div>
 
@@ -521,12 +586,12 @@
               >(Customer Relationship Management)</span
             >
             <p class="project-desc">
-              PulseCRM is a modern and responsive Customer Relationship Management
-              (CRM) web application built to streamline lead management, sales
-              tracking, and business operations. The project focuses on
-              delivering a smooth user experience with efficient state
-              management, dynamic data visualization, advanced filtering, and
-              scalable frontend architecture.
+              PulseCRM is a modern and responsive Customer Relationship
+              Management (CRM) web application built to streamline lead
+              management, sales tracking, and business operations. The project
+              focuses on delivering a smooth user experience with efficient
+              state management, dynamic data visualization, advanced filtering,
+              and scalable frontend architecture.
             </p>
             <ul class="tech-tags">
               <li>#Javascript (ES6+)</li>
@@ -578,7 +643,7 @@
                 type="text"
                 id="name"
                 name="name"
-                class="form-input has-icon"
+                class="form-input has-icon input-field"
                 placeholder="Enter your name"
                 autocomplete="off"
                 required
@@ -609,7 +674,7 @@
                 type="email"
                 id="email"
                 name="email"
-                class="form-input has-icon"
+                class="form-input has-icon input-field"
                 placeholder="name@example.com"
                 autocomplete="off"
                 required
@@ -624,7 +689,7 @@
                 id="message"
                 name="message"
                 rows="8"
-                class="form-textarea"
+                class="form-textarea input-field"
                 placeholder="Your message details..."
                 autocomplete="off"
               ></textarea>
@@ -685,7 +750,7 @@
             aria-label="LinkedIn Profile"
           >
             <svg
-              class="social-icon"
+              class="social-icon socialIcons"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >
@@ -704,7 +769,7 @@
             aria-label="X Profile"
           >
             <svg
-              class="social-icon"
+              class="social-icon socialIcons"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -723,7 +788,7 @@
             aria-label="Instagram Profile"
           >
             <svg
-              class="social-icon"
+              class="social-icon socialIcons"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >
@@ -742,7 +807,7 @@
             aria-label="Send an Email"
           >
             <svg
-              class="social-icon"
+              class="social-icon socialIcons"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -761,7 +826,7 @@
             aria-label="Github Profile"
           >
             <svg
-              class="social-icon"
+              class="social-icon githubIcon"
               style="fill: #ffffff"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
