@@ -103,3 +103,12 @@ moonIcon.addEventListener("click", () => {
     input.style.backgroundColor = "#374151"
   })
 })
+
+const emailIcon = document.querySelector(".email-icon")
+
+emailIcon.addEventListener("click", () => {
+  window.open(
+    "https://mail.google.com/mail/?view=cm&fs=1&to=your.email@gmail.com",
+    "_blank",
+  )
+})
