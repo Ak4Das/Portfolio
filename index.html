@@ -12,6 +12,55 @@
     <title>Akash Das</title>
     <link rel="stylesheet" href="font.css" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #000;
+        font-family:
+          Helvetica Neue,
+          Helvetica,
+          Arial,
+          sans-serif;
+        font-size: 14px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
     <script src="script.js" defer></script>
   </head>
   <body id="body">
@@ -616,6 +665,92 @@
         </div>
       </div>
     </section>
+    <section class="my-blogs">
+      <h2 class="blogs-title">My Blogs</h2>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a
+              class="blog-link"
+              href="https://akdas.hashnode.dev/javascript-promises-the-complete-internal-workflow-from-ecmascript-to-v8-web-apis-and-the-event-loop"
+              target="_blank"
+            >
+              <div class="testimonial-card">
+                <h2>Javascript Promises</h2>
+                <div class="testimonial-content">
+                  <p class="testimonial-quote">
+                    “This comprehensive technical guide shows the internal
+                    architecture of JavaScript Promises, detailing how they
+                    transition from the ECMAScript specification into real-world
+                    engines like V8. It maps out the exact execution workflow
+                    between memory heaps, web/runtime APIs, microtask queues,
+                    and the event loop for a deep understanding of asynchronous
+                    JavaScript.”
+                  </p>
+                  <h2 class="testimonial-author">Akash Das</h2>
+                  <h3 class="testimonial-role">22nd July 2026</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a
+              class="blog-link"
+              href="https://akdas.hashnode.dev/javascript-promises-api-s"
+              target="_blank"
+            >
+              <div class="testimonial-card">
+                <h2>JavaScript Promises API's</h2>
+                <div class="testimonial-content">
+                  <p class="testimonial-quote">
+                    “This comprehensive guide provides an interactive reference
+                    manual covering core JavaScript Promise methods, including
+                    `then()`, `catch()`, `finally()`, and combinators like
+                    `Promise.all()` and `Promise.any()`. It utilizes a clean
+                    visual hierarchy, stylized code blocks, and execution
+                    outputs to clearly illustrate asynchronous resolution,
+                    rejection, and chaining behaviors. The document concludes
+                    with a quick comparison table summarizing how each Promise
+                    API handles success and failure conditions at a glance.”
+                  </p>
+                  <h2 class="testimonial-author">Akash Das</h2>
+                  <h3 class="testimonial-role">22nd July 2026</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a
+              class="blog-link"
+              href="https://akdas.hashnode.dev/usestate-hook-in-react"
+              target="_blank"
+            >
+              <div class="testimonial-card">
+                <h2>useState Hook in React</h2>
+                <div class="testimonial-content">
+                  <p class="testimonial-quote">
+                    “This content provides a comprehensive, structured guide to
+                    React's useState Hook, detailing how state management drives
+                    the component lifecycle and user interface updates. It
+                    explores fundamental concepts such as re-rendering rules,
+                    state immutability, batching, and the asynchronous nature of
+                    state updates. Additionally, it offers a deep dive into
+                    React's internal mechanisms, explaining how the framework
+                    uses conceptual hook arrays and independent queues to
+                    efficiently track and process state changes.”
+                  </p>
+                  <h2 class="testimonial-author">Akash Das</h2>
+                  <h3 class="testimonial-role">22nd July 2026</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
     <section class="connect-section">
       <h2 class="connect-title">Let's Connect</h2>
 
@@ -849,5 +984,18 @@
         </li>
       </ul>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      })
+    </script>
   </body>
 </html>
