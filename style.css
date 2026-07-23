@@ -853,13 +853,19 @@ body {
   margin-bottom: 64px;
 }
 
+.swiper {
+  max-width: 1280px;
+}
+
 .swiper-slide {
-  background-color: #010612 !important;
+  background-color: transparent !important;
+  align-self: center;
 }
 
 .blog-link {
   text-decoration: none;
   color: #ffffff;
+  display: inline-block;
 }
 
 .testimonial-card {
@@ -874,7 +880,8 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0 0 50px rgba(59, 130, 246, 0.6);
   cursor: grab;
-  background-color: #111111;
+  background-color: transparent;
+  color:#929191;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
